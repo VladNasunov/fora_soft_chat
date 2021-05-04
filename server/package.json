@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "cd webapp && npm run build",
+    "install-webapp": "cd webapp && npm install",
+    "heroku-postbuild": "npm run install-webapp && npm run build",
     "start": "node index.js",
+    "webapp": "cd webapp && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

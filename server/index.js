@@ -61,4 +61,8 @@ io.on('connect', (socket) => {
   });
 });
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('webapp/build'));
+}
+
 server.listen(process.env.PORT || 5000, () => console.log(`Server has started.`));
